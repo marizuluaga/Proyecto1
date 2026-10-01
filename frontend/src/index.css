@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* modo oscuro con la clase "dark" en el html (lo maneja el ThemeContext) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-titulo: "Cinzel", ui-serif, Georgia, serif;
+  --color-pocion-50: #f5f3ff;
+  --color-pocion-100: #ede9fe;
+  --color-pocion-500: #8b5cf6;
+  --color-pocion-600: #7c3aed;
+  --color-pocion-700: #6d28d9;
+  --color-pocion-900: #3b0764;
+  --color-elixir: #34d399;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased;
+}
