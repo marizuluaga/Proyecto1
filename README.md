@@ -15,7 +15,7 @@ Aplicación web donde los aprendices de alquimia se organizan en **gremios**, pr
 | Nombre | GitHub |
 |---|---|
 | Mariana Zuluaga | [@marizuluaga](https://github.com/marizuluaga) |
-| [Compañero(a)] | [@usuario] |
+
 
 ## 🛠️ Tecnologías
 
