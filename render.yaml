@@ -1,0 +1,21 @@
+# Configuracion para desplegar el backend en Render (Blueprint)
+# las variables secretas (MONGODB_URI, JWT_SECRET) se ponen en el panel de Render
+services:
+  - type: web
+    name: potion-lab-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false
