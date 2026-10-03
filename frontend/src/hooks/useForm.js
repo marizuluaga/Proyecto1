@@ -3,7 +3,10 @@ import { useState } from 'react'
 // Hook para formularios controlados con validacion
 // validar: funcion que recibe los valores y retorna un objeto { campo: 'mensaje de error' }
 export function useForm(valoresIniciales, validar) {
-  const [valores, setValores] = useState(valoresIniciales)
+  const crearValoresIniciales = () =>
+    typeof valoresIniciales === 'function' ? valoresIniciales() : valoresIniciales
+
+  const [valores, setValores] = useState(crearValoresIniciales)
   const [errores, setErrores] = useState({})
   const [tocados, setTocados] = useState({})
 
@@ -37,7 +40,7 @@ export function useForm(valoresIniciales, validar) {
   }
 
   function reiniciar() {
-    setValores(valoresIniciales)
+    setValores(crearValoresIniciales())
     setErrores({})
     setTocados({})
   }

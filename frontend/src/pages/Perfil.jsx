@@ -19,6 +19,7 @@ function validar(v) {
 
 export default function Perfil() {
   const { usuario, token, setUsuario } = useAuth()
+  const [ahora] = useState(Date.now)
   const { valores, errores, handleChange, handleBlur, validarTodo } = useForm(
     { nombre: usuario.nombre, especialidad: usuario.especialidad, avatarUrl: usuario.avatarUrl || '' },
     validar,
@@ -53,7 +54,7 @@ export default function Perfil() {
           <Badge>{usuario.especialidad}</Badge>
           {usuario.role === 'admin' && <Badge color="bg-amber-100 text-amber-800">Admin</Badge>}
         </div>
-        {usuario.bloqueadoCrearHasta && new Date(usuario.bloqueadoCrearHasta) > new Date() && (
+        {usuario.bloqueadoCrearHasta && Date.parse(usuario.bloqueadoCrearHasta) > ahora && (
           <p className="mt-4 rounded-lg bg-rose-50 p-2 text-xs text-rose-700">
             Penalizado por baja participación hasta {new Date(usuario.bloqueadoCrearHasta).toLocaleDateString()}
           </p>

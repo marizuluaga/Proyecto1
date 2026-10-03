@@ -1,11 +1,13 @@
 require("dotenv").config();
 const app = require("./app");
 const connectDB = require("./config/db");
+const validarEntorno = require("./config/env");
 const { iniciarJobs } = require("./jobs/formulaJobs");
 
 const PORT = process.env.PORT || 3000;
 
 // primero conectamos a la bd y despues si levantamos el servidor
+validarEntorno();
 connectDB()
   .then(() => {
     app.listen(PORT, () => {

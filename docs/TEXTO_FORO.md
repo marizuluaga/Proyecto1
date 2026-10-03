@@ -10,7 +10,6 @@
 
 **4. Integrantes del grupo:**
 - Mariana Zuluaga – GitHub: marizuluaga
-- [Nombre compañero(a)] – GitHub: [usuario]
 
 **5. Tecnologías trabajadas:**
 - Frontend (Entrega 1): React, Vite, React Router, Context API, Tailwind CSS

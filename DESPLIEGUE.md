@@ -1,15 +1,25 @@
 # Guía de despliegue
 
-## 1. Base de datos en MongoDB Atlas (gratis)
-1. Entrar a https://cloud.mongodb.com y crear un cluster **M0 (Free)**.
-2. En **Database Access** crear un usuario con contraseña (ej: `potionlab` / una clave sin caracteres raros).
-3. En **Network Access** agregar `0.0.0.0/0` (para que Render se pueda conectar).
-4. En **Connect → Drivers** copiar la URI y agregarle el nombre de la BD:
+## 1. Base de datos en MongoDB Atlas
+1. Entrar a https://cloud.mongodb.com y crear un proyecto y un cluster **M0 (Free)**.
+2. En el asistente de seguridad, crear un usuario de base de datos con permiso de lectura y escritura. Este usuario es diferente a la cuenta con la que se inicia sesión en Atlas.
+3. Agregar la IP actual para poder probar desde el computador.
+4. Para la entrega en Render, agregar temporalmente `0.0.0.0/0` en **Network Access**. Esta opción permite conexiones desde cualquier IP, por lo que se debe usar una contraseña fuerte.
+5. En **Connect → Drivers** copiar la URI y agregarle el nombre de la base:
    ```
    mongodb+srv://potionlab:CLAVE@cluster0.xxxxx.mongodb.net/potion-lab
    ```
-5. (Opcional) Llenar Atlas con los datos de prueba desde el computador:
-   poner esa URI en `backend/.env` y correr `npm run seed`.
+6. Si la contraseña tiene caracteres especiales, codificarlos para una URI. Por ejemplo, `@` se convierte en `%40`.
+7. Copiar `backend/.env.example` como `backend/.env`, pegar la URI y crear un `JWT_SECRET` largo. Se puede generar con `openssl rand -hex 32`.
+8. Desde `backend`, comprobar primero la conexión:
+   ```bash
+   npm run db:check
+   ```
+9. Cuando la conexión sea correcta, cargar los datos de prueba:
+   ```bash
+   npm run seed
+   ```
+   El seed borra los datos que ya existan en esa base.
 
 ## 2. Backend en Render
 1. Entrar a https://render.com con la cuenta de GitHub.
@@ -45,4 +55,4 @@
 `frontend/vercel.json` y `frontend/public/_redirects` ya están para que las rutas de React no den 404 al recargar.
 
 ## 4. Actualizar el README
-Poner las URLs reales en la tabla del inicio del `README.md`.
+Poner las tres URLs reales en la tabla del inicio del `README.md` y probarlas en una ventana privada.

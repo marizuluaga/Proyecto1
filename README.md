@@ -1,21 +1,20 @@
-# 🧪 Potion Lab – Laboratorio Colaborativo de Pociones
+# Potion Lab
 
 **Proyecto 1 · Ingeniería Web · Universidad EIA**
 
-Aplicación web donde los aprendices de alquimia se organizan en **gremios**, proponen **fórmulas**, votan ingredientes, métodos y frascos, y el sistema calcula la **poción definitiva**, que queda guardada en el **Grimorio** del gremio. (Adiós al caos del grupo de WhatsApp.)
+Aplicación web en la que los usuarios crean gremios, proponen fórmulas y votan por sus ingredientes. El resultado de cada votación se guarda como una poción en el grimorio del gremio.
 
 | | |
 |---|---|
-| 🌐 Frontend | `[URL de Vercel/Netlify]` |
-| ⚙️ API | `[URL de Render]` |
-| 📚 Swagger | `[URL de Render]/api-docs` |
+| Frontend | Pendiente de desplegar |
+| API | Pendiente de desplegar |
+| Swagger | Pendiente de desplegar |
 
 ## 👥 Integrantes
 
 | Nombre | GitHub |
 |---|---|
 | Mariana Zuluaga | [@marizuluaga](https://github.com/marizuluaga) |
-
 
 ## 🛠️ Tecnologías
 

@@ -30,17 +30,22 @@ function validar(v) {
   return errores
 }
 
+function valoresIniciales() {
+  const tresDias = 3 * 24 * 60 * 60 * 1000
+  return {
+    nombrePocion: '',
+    efectoDeseado: '',
+    dificultad: '2',
+    fechaFin: aInputFecha(new Date(Date.now() + tresDias)),
+  }
+}
+
 export default function CrearFormula() {
   const { gremioId } = useParams()
   const { token } = useAuth()
   const navigate = useNavigate()
   const { valores, errores, handleChange, handleBlur, validarTodo, erroresDelServidor } = useForm(
-    {
-      nombrePocion: '',
-      efectoDeseado: '',
-      dificultad: '2',
-      fechaFin: aInputFecha(new Date(Date.now() + 3 * 24 * 60 * 60 * 1000)),
-    },
+    valoresIniciales,
     validar,
   )
   const [error, setError] = useState('')
