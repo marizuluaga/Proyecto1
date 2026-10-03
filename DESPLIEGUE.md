@@ -38,7 +38,7 @@
    | `NODE_ENV` | `production` |
    | `CORS_ORIGIN` | la URL del front (cuando exista) |
 5. **Create Web Service** y esperar que diga *Live*.
-6. Probar: `https://TU-API.onrender.com/health` y `https://TU-API.onrender.com/api-docs`
+6. Probar: `https://potion-lab-api.onrender.com/health` y `https://potion-lab-api.onrender.com/api-docs`
 
 > Ojo: en el plan gratis Render "duerme" el servidor; la primera petición puede tardar ~50 s.
 
@@ -48,9 +48,9 @@
 1. Entrar a https://vercel.com con GitHub → **Add New Project** → repo `Proyecto1`.
 2. **Root Directory:** `frontend` (Vercel detecta Vite solo).
 3. En **Environment Variables** agregar:
-   `VITE_API_URL = https://TU-API.onrender.com/api`
+   `VITE_API_URL = https://potion-lab-api.onrender.com/api`
 4. **Deploy**.
-5. Volver a Render y poner esa URL de Vercel en `CORS_ORIGIN`.
+5. Volver a Render y poner `https://proyecto1-mocha.vercel.app` en `CORS_ORIGIN`.
 
 `frontend/vercel.json` y `frontend/public/_redirects` ya están para que las rutas de React no den 404 al recargar.
 

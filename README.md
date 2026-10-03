@@ -6,9 +6,9 @@ Aplicación web en la que los usuarios crean gremios, proponen fórmulas y votan
 
 | | |
 |---|---|
-| Frontend | Pendiente de desplegar |
-| API | Pendiente de desplegar |
-| Swagger | Pendiente de desplegar |
+| Frontend | https://proyecto1-mocha.vercel.app |
+| API | https://potion-lab-api.onrender.com |
+| Swagger | https://potion-lab-api.onrender.com/api-docs |
 
 ## 👥 Integrantes
 
@@ -22,7 +22,7 @@ Aplicación web en la que los usuarios crean gremios, proponen fórmulas y votan
 |---|---|
 | Frontend (Entrega 1) | React 19, Vite, React Router, Context API, Tailwind CSS 4 |
 | Backend (Entrega 2) | Node.js, Express 5, MongoDB + Mongoose, JWT, bcryptjs, express-validator, Swagger UI |
-| Despliegue | Render (API), MongoDB Atlas (BD), Vercel o Netlify (front) |
+| Despliegue | Render (API), MongoDB Atlas (BD), Vercel (front) |
 
 ## 📁 Estructura del repositorio
 

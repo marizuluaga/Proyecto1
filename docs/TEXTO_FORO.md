@@ -1,6 +1,6 @@
 # Texto para el foro (Entrega 1 + 2)
 
-(copiar, pegar y llenar lo que está entre [ ])
+(copiar y pegar en el foro)
 
 **1. Nombre del proyecto:** Potion Lab – Laboratorio Colaborativo de Pociones
 
@@ -17,8 +17,8 @@
 - Despliegue: Render + MongoDB Atlas (API), Vercel (front)
 
 **Links:**
-- API: [https://....onrender.com]
-- Swagger: [https://....onrender.com/api-docs]
-- Frontend: [https://....vercel.app]
+- API: https://potion-lab-api.onrender.com
+- Swagger: https://potion-lab-api.onrender.com/api-docs
+- Frontend: https://proyecto1-mocha.vercel.app
 
 Nota: no alcanzamos a entregar a tiempo la Entrega 1, así que en esta entrega van las dos (carpeta `frontend/` = Entrega 1, carpeta `backend/` = Entrega 2).
