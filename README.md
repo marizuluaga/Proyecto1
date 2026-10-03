@@ -54,7 +54,7 @@ npm run seed              # datos de prueba (borra la BD)
 npm run dev               # http://localhost:3000  ·  Swagger en /api-docs
 ```
 
-**2. Frontend** (en otra terminal)
+**2. Frontend** 
 ```bash
 cd frontend
 npm install
@@ -81,5 +81,3 @@ Código del gremio privado: `LUNA26`
 - Grimorio con buscador, ranking del gremio y penalización por baja participación
 - Modo oscuro 🌙 y diseño responsive
 
-Más detalle en [backend/README.md](backend/README.md) y [frontend/README.md](frontend/README.md).
-Guía de despliegue: [DESPLIEGUE.md](DESPLIEGUE.md)
